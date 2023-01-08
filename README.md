@@ -1,2 +1,2 @@
 # Twitter_Clone
-Replicating the twitter website UI in code
+Replicating the Twitter website UI in code.
