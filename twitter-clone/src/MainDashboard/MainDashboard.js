@@ -1,18 +1,16 @@
 import React from 'react'
 import Home from './components/Home/Home'
 import { useSelector, useDispatch } from 'react-redux'
-import { actions } from '../ReduxStates/index'
-import { bindActionCreators } from 'redux'
+
+import Profile from './components/Profile/Profile'
 
 
 export const MainDashboard = () => {
 
     const type = useSelector((state) => state.type) // redux state
-    const dispatch = useDispatch()
-    const {toggleMain} = bindActionCreators(actions, dispatch)
 
     return (
-        type == 'home' ? <Home/> : type == 'test' ? <div onClick={() => toggleMain("home")}>HELLO</div> : <></>
+        type.mode == 'home' ? <Home/> : type.mode == 'profile' ? <Profile username={type?.value}/> : <></>
     )
 }
 

@@ -1,5 +1,9 @@
 import React from "react";
 import FollowButton from "../GeneralComponents/FollowButton";
+import {RxCross1} from 'react-icons/rx'
+import { useSelector, useDispatch } from 'react-redux'
+import { actions } from '../ReduxStates/index'
+import { bindActionCreators } from 'redux'
 
 export const Topics = ({topics, setTopics}) => {
 
@@ -8,6 +12,9 @@ export const Topics = ({topics, setTopics}) => {
     const deleteTopic = (index) => {
         setTopics(topics.filter((item, currIndex) => currIndex !== index))
     }
+
+    const dispatch = useDispatch()
+    const {toggleMain} = bindActionCreators(actions, dispatch)
 
     return (
         topics.length ?
@@ -22,8 +29,8 @@ export const Topics = ({topics, setTopics}) => {
                                 <div className="text-text1">{item.body}</div>
                             </div>
                             <div className="flex flex-row gap-4 items-center">
-                                <div><FollowButton/></div>
-                                <div className="text-text1" onClick={() => deleteTopic(index)}>X</div>
+                                <div onClick={() => toggleMain({mode: 'profile', value: 'abhinav_2002'})}><FollowButton/></div>
+                                <div className="text-text1 hover:text-red-600" onClick={() => deleteTopic(index)}><RxCross1/></div>
                             </div>
                         </div>
                         <hr></hr>

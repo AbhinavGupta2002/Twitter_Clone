@@ -1,4 +1,5 @@
 import React from "react";
+import {BsThreeDots} from 'react-icons/bs'
 
 export const Ending = () => {
     return (
@@ -10,7 +11,7 @@ export const Ending = () => {
             <div className="cursor-pointer hover:underline text-gray-500">Ads Info</div>
             <div className="flex items-center gap-1 cursor-pointer hover:underline text-gray-500">
                 <div>More</div>
-                <div>...</div>
+                <div><BsThreeDots/></div>
             </div>
             <div className="font-bold text-main"><label>Developed by Abhinav Gupta</label></div>
         </div>

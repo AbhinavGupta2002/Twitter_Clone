@@ -8,7 +8,7 @@ import headshotAbhinav from '../img/headshot2.jpg'
 // icon imports
 import {FiHome, FiHash, FiBell, FiMail, FiBookmark} from 'react-icons/fi'
 import {CgList, CgMoreO} from 'react-icons/cg'
-import {BsTwitter} from 'react-icons/bs'
+import {BsThreeDots, BsTwitter} from 'react-icons/bs'
 
 export const LeftDashboard = () => {
 
@@ -78,13 +78,12 @@ export const LeftDashboard = () => {
             <div className="w-42 fixed bottom-3">
                 <div className="flex text-xs cursor-pointer">
                     {!isSubNormal && <div className="w-2/5"><ProfileImage image={headshotAbhinav}/></div>}
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between w-full items-center">
                         <div>
                             <div className="font-bold">Abhinav Gupta</div>
                             <div className="text-text1">@abhinavgupta</div>
                         </div>
-                        {!isSubNormal && <div className="text-text1">...</div>}
-                        {/*IMAGE_HERE*/}
+                        {!isSubNormal && <div className="text-text1"><BsThreeDots/></div>}
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 // Reducer for toggling view mode - day or night
-const type = localStorage.getItem('type')
+const type = JSON.parse(localStorage.getItem('type'))
 
-const mainReducer = (state = type ? type : 'home', action) => {
+const mainReducer = (state = type ? type : {mode: 'home'}, action) => {
     switch (action.type) {
         case 'update':
-            localStorage.setItem('type', action.payload)
+            localStorage.setItem('type', JSON.stringify(action.payload))
             return action.payload
         default:
             return state

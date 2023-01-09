@@ -96,18 +96,16 @@ export const Home = () => {
     ]
 
     return (
-        <>
-            <div className="border-l border-r w-main">
-                <div className="p-3">
-                    <div className="font-extrabold text-lg"><label>Home</label></div>
-                    {/*IMAGE_HERE*/}
-                </div>
-                <hr></hr>
-                <NewPost image={headshotAbhinav}/>
-                <ContentDivider/>
-                <FeedContent content={content}/>
+        <div className="border-l border-r w-main">
+            <div className="p-3">
+                <div className="font-extrabold text-lg"><label>Home</label></div>
+                {/*IMAGE_HERE*/}
             </div>
-        </>
+            <hr></hr>
+            <NewPost image={headshotAbhinav}/>
+            <ContentDivider/>
+            <FeedContent content={content}/>
+        </div>
     )
 }
 
